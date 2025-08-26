@@ -39,6 +39,11 @@ const sidebars: SidebarsConfig = {
       label: "Regulation",
       items: ["regulation/definitions", "regulation/harming"],
     },
+    {
+      type: "category",
+      label: "Facility Policies",
+      items: ["facility-policies/locations", "facility-policies/civil-events"],
+    },
   ],
 };
 
