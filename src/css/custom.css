@@ -65,11 +65,20 @@
   border-right: none !important;
 }
 
-/* Navbar styling - remove background and add bottom border */
+/* Navbar styling - solid background matching overall background */
 .navbar {
-  background-color: transparent !important;
+  background-color: var(--ifm-background-color) !important;
   border-bottom: 1px solid var(--ifm-toc-border-color);
   margin-bottom: 15px;
+  transition: background-color 150ms ease, backdrop-filter 150ms ease;
+}
+
+/* Apply a subtle backdrop blur once the page is slightly scrolled */
+.navbar.navbar--blurred {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  /* Slight translucency to make blur visible on supported browsers */
+  background-color: color-mix(in srgb, var(--ifm-background-color) 88%, transparent) !important;
 }
 
 .container {
