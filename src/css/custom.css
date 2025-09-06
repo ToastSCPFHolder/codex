@@ -97,3 +97,16 @@
   padding-left: calc((100% - var(--codex-content-max-width)) / 2) !important;
   padding-right: calc((100% - var(--codex-content-max-width)) / 2) !important;
 } */
+
+/* Make details decoration and border color match TOC border color */
+details {
+  --docusaurus-details-decoration-color: var(--ifm-hr-background-color) !important;
+  border-color: var(--ifm-hr-background-color) !important;
+}
+
+/* Make alert-info background blurred like the navbar */
+.alert.alert--info {
+  --ifm-alert-background-color: color-mix(in srgb, var(--ifm-background-color) 88%, transparent);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
